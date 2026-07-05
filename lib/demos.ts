@@ -81,3 +81,6 @@ export const companySizeOptions = [
   "51 to 200",
   "200+",
 ];
+
+/* Backward-compatible alias for components importing `companySizes`. */
+export const companySizes = companySizeOptions;

@@ -180,3 +180,15 @@ export const pricingDisclaimer =
 
 export const pricingNote =
   "Odoo licence pricing is indicative and should be confirmed against the official Odoo pricing page before purchase.";
+
+/* ------------------------------------------------------------------ */
+/*  Backward-compatible aliases                                        */
+/*  Some components import shorter names. These keep them working.     */
+/* ------------------------------------------------------------------ */
+export const licenceMonthly = licencePerUserMonthly;
+export type Currency = CurrencyCode;
+export type Billing = BillingCycle;
+export type Hosting = HostingType;
+export type Implementation = ImplementationPackage;
+export type Support = SupportPackage;
+export type Optional = OptionalService;
