@@ -1,0 +1,42 @@
+
+> libertas-website@1.0.0 dev
+> next dev -p 3001
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3001
+
+ ✓ Starting...
+ ✓ Ready in 1382ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.4s (1514 modules)
+ GET / 200 in 5812ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 2.9s (1520 modules)
+ GET /services 200 in 3005ms
+ ✓ Compiled /odoo-apps in 198ms (1513 modules)
+ GET /odoo-apps 200 in 312ms
+ ✓ Compiled /industries in 185ms (1517 modules)
+ GET /industries 200 in 283ms
+ ✓ Compiled /case-studies in 264ms (1519 modules)
+ GET /case-studies 200 in 356ms
+ ✓ Compiled /videos in 238ms (1521 modules)
+ GET /videos 200 in 335ms
+ ○ Compiling /demos ...
+ ✓ Compiled /demos in 712ms (1547 modules)
+ GET /demos 200 in 810ms
+ ✓ Compiled /pricing in 297ms (1556 modules)
+ GET /pricing 200 in 401ms
+ ✓ Compiled /about in 259ms (1558 modules)
+ GET /about 200 in 360ms
+ ✓ Compiled /contact in 282ms (1563 modules)
+ GET /contact 200 in 381ms
+ GET / 200 in 194ms
+ GET /services 200 in 135ms
+ GET /odoo-apps 200 in 94ms
+ GET /industries 200 in 113ms
+ GET /case-studies 200 in 70ms
+ GET /videos 200 in 66ms
+ GET /demos 200 in 50ms
+ GET /pricing 200 in 67ms
+ GET /about 200 in 46ms
+ GET /contact 200 in 67ms
