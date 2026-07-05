@@ -13,7 +13,8 @@ import {
 } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { site, serviceOptions } from "@/lib/content";
+import { site } from "@/lib/site";
+import { serviceOptions } from "@/lib/services";
 import { validateContact, type FieldErrors } from "@/lib/validation";
 import { cn } from "@/lib/cn";
 

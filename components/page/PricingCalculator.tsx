@@ -57,7 +57,7 @@ export function PricingCalculator() {
           <label className="block">
             <span className="label">Currency</span>
             <select value={currency} onChange={(event) => setCurrency(event.target.value as Currency)} className="field">
-              {currencies.map((item) => <option key={item}>{item}</option>)}
+           {currencies.map((item) => <option key={item.code} value={item.code}>{item.label}</option>)}
             </select>
           </label>
           <label className="block">

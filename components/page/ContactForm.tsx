@@ -49,7 +49,7 @@ export function ContactForm({
     (key: keyof FormState) =>
     (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
       setForm((current) => ({ ...current, [key]: event.target.value }));
-      setErrors((current) => (current[key] ? { ...current, [key]: undefined } : current));
+     setErrors((current) => (current[key as keyof typeof current] ? { ...current, [key]: undefined } : current));
     };
 
   async function onSubmit(event: React.FormEvent) {
@@ -79,9 +79,8 @@ export function ContactForm({
     setStatus("sent");
     setForm({ ...baseForm, submissionType: type, service: defaultService });
   }
-
-  const options = demo ? demoOptions.map((item) => item.title) : serviceOptions;
-  const busy = status === "sending";
+const options = demo ? demoOptions : serviceOptions;
+const busy = status === "sending";
 
   return (
     <form onSubmit={onSubmit} noValidate className="rounded-3xl bg-white p-6 shadow-card ring-1 ring-navy-100/70 sm:p-8">

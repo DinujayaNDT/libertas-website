@@ -1,3 +1,4 @@
+export type VideoItem = Video;
 export type Video = {
   title: string;
   category: string;

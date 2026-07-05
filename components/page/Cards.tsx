@@ -20,7 +20,7 @@ export function ServiceCard({ service, detailed = false }: { service: Service; d
       {detailed && (
         <div className="mt-5 grid gap-5 md:grid-cols-2">
           <InfoBlock title="What it is" body={service.what} />
-          <InfoBlock title="Who it is for" body={service.for} />
+          <InfoBlock title="Who it is for" body={service.who} />
           <ListBlock title="Key benefits" items={service.benefits} />
           <ListBlock title="Typical deliverables" items={service.deliverables} />
         </div>
@@ -40,7 +40,6 @@ export function AppCard({ app }: { app: OdooApp }) {
           <app.icon className="h-5 w-5" />
         </span>
         <div>
-          <p className="text-xs font-semibold uppercase text-sky-700">{app.category}</p>
           <h2 className="mt-1 font-display text-lg font-bold text-navy-800">{app.name}</h2>
         </div>
       </div>
@@ -57,11 +56,10 @@ export function IndustryCard({ industry }: { industry: Industry }) {
     <article className="h-full rounded-2xl bg-white p-6 shadow-soft ring-1 ring-navy-100/70 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
       <span className="grid h-12 w-12 place-items-center rounded-xl bg-navy-50 text-navy-700">
         <industry.icon className="h-6 w-6" />
-      </span>
-      <h2 className="mt-5 font-display text-xl font-bold text-navy-800">{industry.name}</h2>
+    </span><h2 className="mt-5 font-display text-xl font-bold text-navy-800">{industry.label}</h2>
       <p className="mt-3 text-sm leading-relaxed text-navy-600/90">{industry.summary}</p>
       <ListBlock title="Common problems" items={industry.problems} />
-      <ListBlock title="Odoo solution areas" items={industry.solutionAreas} />
+     <ListBlock title="Odoo solution areas" items={industry.solutions} />
       <p className="mt-4 text-sm leading-relaxed text-navy-700">{industry.approach}</p>
       <Link href="/demos" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-700">
         Discuss this industry <ArrowRight className="h-4 w-4" />
@@ -75,7 +73,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
     <article className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-soft ring-1 ring-navy-100/70 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
       <div className="flex flex-wrap gap-2">
         <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">{study.industry}</span>
-        <span className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy-500">{study.label}</span>
+       <span className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy-500">{study.industry}</span>
       </div>
       <h2 className="mt-5 font-display text-xl font-bold text-navy-800">{study.title}</h2>
       <InfoBlock title="Challenge" body={study.challenge} />
